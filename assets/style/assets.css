@@ -1,0 +1,45 @@
+.icon-style-book{
+    height: 85px;
+    width: 75px;
+    object-fit: cover;
+    
+ }
+ 
+ .icon-frame{
+    height: 156px;
+    width: 100%;
+    
+    border-radius: 3px;
+    
+    background-color: bisque;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ 
+    padding-top: 20px;
+ }
+ 
+ .book-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .icon-frame-likes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: rgb(28, 29, 80);
+ }
+ 
+ .like-button{
+    height: 16px;
+    width: 16px;
+    object-fit: cover;
+    padding-left: 4px;
+    padding-right: 2px;
+ 
+    cursor: pointer;
+ 
+ }
