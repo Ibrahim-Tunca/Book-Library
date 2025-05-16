@@ -11,11 +11,17 @@ function getTemplateBooks(indexTemplate){
                       </div>
                       <div class="icon-frame-likes">
                           <a>${books[indexTemplate].likes}</a>
-                          <button id="like_button" onclick="likeButton(${indexTemplate})"></button>
+                              
+                          <a id="like_id${indexTemplate}" onload="loadLikeButton(${indexTemplate})">
+                             x 
+                          </a>
+
                       </div>
                   </div>
 
-                  <table style="width: 100%">
+
+
+                  <table class="table-width">
                     <tr>
                       <td>Preis: </td>
                       <td>${books[indexTemplate].price},-</td>
@@ -45,13 +51,18 @@ function getTemplateBooks(indexTemplate){
             </div>`
 }
 
+function loadLikeButton(indexTemplate){
+  let contentRef = document.getElementById(`like_id${indexTemplate}`);
 
-function likeButton(index){
-  contentRef = document.getElementById("like_button");
-  if(books[index].liked == true){
-     return `<img src="./assets/img/icons/like_true.png" alt="liked">`
-  } else {return `<img src="./assets/img/icons/like_false.png" alt="not-liked">`}
+    if(books[indexTemplate].liked == true){
+      contentRef.innerHTML =  `<img src="./assets/img/icons/like_true.png">`
+    }else contentRef.innerHTML =  `<img src="./assets/img/icons/like_false.png">`
+    
+  
 }
+
+
+
 
 function showAllComments(indexTemplate){
   contentRef = document.getElementById("comment_section");

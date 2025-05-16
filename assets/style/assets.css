@@ -4,6 +4,12 @@
     object-fit: cover;
     
  }
+
+ .island-icon-header{
+   height: 31px;
+   width: 31px;
+   object-fit: cover;
+ }
  
  .icon-frame{
     height: 156px;
@@ -42,4 +48,8 @@
  
     cursor: pointer;
  
+ }
+
+ .table-width{
+   width: 100%;
  }

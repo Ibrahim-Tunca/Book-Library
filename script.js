@@ -138,7 +138,7 @@ let books = [
       "name": "Das verborgene Königreich",
       "author": "Elena Gold",
       "likes": 920,
-      "liked": false,
+      "liked": true,
       "price": 17.50,
       "publishedYear": 2020,
       "genre": "Fantasy",
@@ -173,6 +173,8 @@ let books = [
       ]
     }
   ]
+
+  
 
 
 
