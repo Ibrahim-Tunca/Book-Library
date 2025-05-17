@@ -12,67 +12,49 @@ function getTemplateBooks(indexTemplate){
                       <div class="icon-frame-likes">
                           <a>${books[indexTemplate].likes}</a>
                               
-                          <a id="like_id${indexTemplate}" onload="loadLikeButton(${indexTemplate})">
-                             x 
+                          <a id="like_button${indexTemplate}" onclick="toggleLikeButton(${indexTemplate})">
+
+                            ${loadLikesButton(indexTemplate)}
+
                           </a>
 
                       </div>
                   </div>
 
 
-
                   <table class="table-width">
                     <tr>
-                      <td>Preis: </td>
-                      <td>${books[indexTemplate].price},-</td>
-                      
-                       
+                        <td>Preis: </td>
+                        <td>${books[indexTemplate].price},-</td>            
                     </tr>
                     <tr>
-                      <td>Genre: </td>
-                      <td>${books[indexTemplate].genre}</td>
-                      
+                        <td>Genre: </td>
+                        <td>${books[indexTemplate].genre}</td>
                     </tr>
                     <tr>
-                      <td>Erschienen: </td>
-                      <td>${books[indexTemplate].publishedYear}</td>
+                        <td>Erschienen: </td>
+                        <td>${books[indexTemplate].publishedYear}</td>
                     </tr>
                   </table>
 
+                  <br>
 
 
-                  <div id="comment_section">
-                  <p>${showAllComments(indexTemplate)}</p>
+                  <div>
+                      ${showAllComments(indexTemplate)}
                   </div>
                   
-                  
-
-              
             </div>`
 }
 
-function loadLikeButton(indexTemplate){
-  let contentRef = document.getElementById(`like_id${indexTemplate}`);
-
-    if(books[indexTemplate].liked == true){
-      contentRef.innerHTML =  `<img src="./assets/img/icons/like_true.png">`
-    }else contentRef.innerHTML =  `<img src="./assets/img/icons/like_false.png">`
-    
-  
-}
-
-
-
 
 function showAllComments(indexTemplate){
-  contentRef = document.getElementById("comment_section");
-  
-  for (let index = 0; index < books[indexTemplate].comments.lenght ; index++) {
-     
-    
-    
+    let htmlText = "";
 
-    contentRef.innerHTML += `${books[indexTemplate].comments[index].name}`
-    
+    for (let index = 0; index < books[indexTemplate].comments.length; index++) {
+  
+    htmlText += `<p><i class="user-name-style">${books[indexTemplate].comments[index].name}</i><br><a> ${books[indexTemplate].comments[index].comment}</a></p><br>`
   }
-}
+    return htmlText;
+  }
+

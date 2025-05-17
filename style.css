@@ -40,13 +40,20 @@ h2{
    padding-bottom: 15px;
    margin-bottom: 98px;
 
-   height: 311px;
+   height: 900px;
    width: 216px;
    border-radius: 12px;
    border-width: 5px;
    border-color: bisque;
    background-color: rgb(28, 29, 80);
    
-
 }
 
+
+.user-name-style{
+   color: rgb(28, 29, 80);
+   background-color: bisque;
+   padding-left: 1px;
+   padding-right: 3px;
+   border-radius: 3px;
+}
