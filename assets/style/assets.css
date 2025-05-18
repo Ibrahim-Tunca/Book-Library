@@ -45,11 +45,29 @@
     object-fit: cover;
     padding-left: 4px;
     padding-right: 2px;
- 
     cursor: pointer;
- 
+ }
+
+ .like-button:hover{
+   filter:brightness(1.6);
  }
 
  .table-width{
    width: 100%;
  }
+
+ .send-button{
+   width: 15px;
+   height: 15px;
+   object-fit: cover;
+   object-fit: cover;
+   margin-left: -17px;
+   margin-bottom: -3px;
+ }
+
+ .send-button:hover{
+   filter:brightness(1.4);
+   cursor: pointer;
+ }
+
+ 

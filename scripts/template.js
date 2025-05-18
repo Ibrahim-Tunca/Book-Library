@@ -37,24 +37,20 @@ function getTemplateBooks(indexTemplate){
                     </tr>
                   </table>
 
-                  <br>
-
-
-                  <div>
-                      ${showAllComments(indexTemplate)}
-                  </div>
+                  
+                    <div class="commentary-scroll-section-header">
+                         <a>kommentare...</a>
+                        <div class="seperator" ></div>
+                    </div>
+                    <div class="commentary-scroll-section">
+                        <div class="commentary-scroll-section-content">
+                          <div class="display-flex">
+                            <input type="text" id="add_comment${indexTemplate}" class="input-commentary-scroll-section" placeholder="Hier Kommentieren...">
+                            <a ><img onclick="addComment(${indexTemplate})" class="send-button" src="./assets/img/icons/senden.png" alt="senden.png"></a>
+                          </div>
+                          ${showAllComments(indexTemplate)}
+                        </div>
+                    </div>
                   
             </div>`
 }
-
-
-function showAllComments(indexTemplate){
-    let htmlText = "";
-
-    for (let index = 0; index < books[indexTemplate].comments.length; index++) {
-  
-    htmlText += `<p><i class="user-name-style">${books[indexTemplate].comments[index].name}</i><br><a> ${books[indexTemplate].comments[index].comment}</a></p><br>`
-  }
-    return htmlText;
-  }
-

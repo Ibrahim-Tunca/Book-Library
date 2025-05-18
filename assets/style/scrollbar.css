@@ -1,0 +1,85 @@
+.user-name-style{
+   color: rgb(28, 29, 80);
+   background-color: bisque;
+   padding-left: 1px;
+   padding-right: 3px;
+   border-radius: 3px;
+}
+
+.padding-user-comment{
+    padding-top: 10px;
+}
+
+.commentary-scroll-section{
+   height: 200px;
+   background-color:rgb(84, 116, 117);
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+.commentary-scroll-section-header{
+   overflow: hidden;
+   background-color: cadetblue;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.commentary-scroll-section-content{
+   flex-grow: 1; 
+   padding: 15px;
+   overflow-y: auto;
+   scrollbar-width: thin; /*nur für Firefox-Browser*/
+   scrollbar-color:  bisque; /*Das auch*/
+}
+
+.commentary-scroll-section-content::-webkit-scrollbar {
+    width: 8px; /* Breite der Scrollbar */
+}
+
+.commentary-scroll-section-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Hintergrund der Scrollbar-Spur */
+    border-radius: 10px;
+}
+
+.commentary-scroll-section-content::-webkit-scrollbar-thumb {
+    background: #007bff; /* Farbe des Scrollbar-Griffs */
+    border-radius: 10px;
+}
+
+.commentary-scroll-section-content::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Farbe des Griffs beim Überfahren mit der Maus */
+}
+
+.input-commentary-scroll-section{
+   padding-right: 14px;
+   background-color: rgb(137, 174, 175);
+   border-image: none;
+   border-radius: 20px;
+   border-color: rgb(84, 116, 117);
+   border-style: none;
+   padding-top: 5px;
+   padding-left: 8px;
+   width: 194px;
+}
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.no-comment-section{
+    padding-top: 7px;
+    color:darkgrey;
+}
+
+.no-comment-font{
+    padding-top: 4px;
+    font-size: 11px;
+    text-align: center;
+}
